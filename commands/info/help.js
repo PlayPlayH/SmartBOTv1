@@ -16,7 +16,8 @@ module.exports = {
     .setTitle(`${client.user.username} Commands!`)
     .setDescription(`Use ${Prefix}Help <Command Name> For More Command Information!` + 
     "\n\n**Fun**\n`Avatar, Coinflip, Howgay, Meme, Rate, 8ball, Dicksize, Ascii, Choose, Hack, Randomnumber`" + "\n\n" + "**Moderation**\n`Clear, Mute, Unmute, Tempmute, Kick, Ban, Unban, Tempban, Warn, Warnings, ResetWarns`" + "\n\n"+
-    "**Information**\n`Help, Covid, Weather, Userinfo, Serverinfo, Ping`")
+    "**Information**\n`Help, Weather, Userinfo, Serverinfo, Ping`")
+    .addField("Economy Commands", "`work` `beg` `rob` `pay` `balance` `profile` `withdraw` `deposit` `daily` `weekly` `store` `buy` `sell` `roulette` `slots` `storeinfo [item]`")
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();
     
@@ -39,5 +40,31 @@ module.exports = {
     } else {
       return message.channel.send(embed);
     }
-  }
+    /*const Discord = require('discord.js')
+const db = require('quick.db')
+
+module.exports.run = async (bot, message, args) => {
+    if(!message.content.startsWith('e!'))return;  
+
+
+    let embed = new Discord.MessageEmbed()
+    .setTitle("Money Man Help Centre [Prefix e!]")
+    .addField("Economy Commands", "`work` `beg` `rob` `pay` `balance` `profile` `withdraw` `deposit` `daily` `weekly` `store` `buy` `sell`")
+    .addField("Gambling Commmands", "`roulette` `slots`")
+    .addField("Economy Extra Commands", "`storeinfo [item]`")
+    .setColor("#FFFFFF")
+    message.channel.send(embed)
+
+
+
+
+}
+
+module.exports.help = {
+  name:"help",
+  aliases: [""]
+}
+
+    */
+  } 
 };
